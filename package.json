@@ -60,7 +60,8 @@
     "vue-template-compiler": "2.5.13",
     "webpack": "^3.6.0",
     "webpack-dev-server": "^2.9.1",
-    "webpack-stream": "^4.0.3"
+    "webpack-stream": "^4.0.3",
+    "yarn": "^1.7.0"
   },
   "browserslist": [
     "> 1%",

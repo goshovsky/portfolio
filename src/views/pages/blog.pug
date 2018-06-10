@@ -1,0 +1,36 @@
+extends ../internal.layout.pug
+
+block variables
+  - var title = 'Блог';
+
+block scripts
+  script(src='blog.bundle.js')
+
+block content
+    header.header
+        .user.blog__user
+            .user__pic
+                img.user__pic-img
+            .user__description
+                .user__title Блог
+                .user__info Личный сайт разработчика
+    section.blog
+        .triangles
+            .triangles__left
+            .triangles__right
+        .blog__left
+            aside.sidebar
+                nav.menu-left
+                    ul.menu-left__list
+                        each item in ['Menu-1', "Menu-1", "Menu-1", "Menu-1"]
+                            li.menu-left__item
+                                a(href="").menu-left__link #{item}
+
+        .blog_right
+            .post-list
+                .post
+                    h1.post__title
+                    .post__date 10 июня 2018
+                    .post__text
+                        p gdgfdfgdfgdfg sdf d
+                        p gdgfdfgdfgdfg sdf d

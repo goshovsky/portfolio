@@ -1,0 +1,38 @@
+extends ../main.layout.pug
+
+block variables
+  - var title = 'Welcome';
+block content
+    section.welcome
+        .welcome__header-link
+            a(href="").btn.btn-auth Авторизоваться
+        .welcome__clip
+            .user
+                .user__image
+                    img.user_avatar
+                .user__description
+                    .user__name Владимир Астахов
+                    .user__info Личный сайт разработчика
+            .social-links
+                -
+                    var socials = [
+                        ['vk', 'http://vk.com'],
+                        ['gh', 'http://gh.com'],
+                        ['in', 'http://in.com']
+                    ]
+                ul.socials
+                    each item in socials
+                        li.socials__item
+                            a(href=`${item[1]}`).socials__link
+                                +icon(item[0], 'socials__link-icon')
+            .welcome_menu
+                -
+                    var links = [
+                        ['Мои работы','/works'],
+                        ['Обо мне','/about'],
+                        ['Блог','/works']
+                    ]
+                ul.menu-links
+                    each item in links
+                        li.menu__item
+                            a(href=`${item[1]}`).menu__link #{item[2]}
