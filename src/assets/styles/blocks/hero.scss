@@ -1,0 +1,66 @@
+.hero {
+  background: url('/assets/images/water.jpg') top center;
+  background-size: cover;
+  height: auto;
+  position: relative;
+  text-align: center;
+}
+.hero__wrap {
+  width: 1200px;
+  margin:0 auto;
+  position: relative;
+  min-height:600px;
+}
+
+.hero__links {
+  position: absolute;
+  left: 30px;
+  top: 30px
+}
+.socials__link-icon.social__link-icon_hero-socials {
+  width: 26px;
+  height: 22px;
+  fill:#fff;
+}
+
+.hero__menu {
+  position: absolute;
+  right: 30px;
+  top: 30px
+}
+
+.hamburger {
+  background: svg-load('hamburger.svg', fill=#fff) center center no-repeat;
+  display: block;
+  width: 40px;
+  height:35px;
+}
+
+.hero__title {
+  top: 50%;
+  margin: 0 -50% 0 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  min-height: 300px;
+  background: svg-load('portfolio_header.svg', fill=#fff, opacity=0.12) center center no-repeat;
+}
+.hero__user {
+  padding: 40px;
+}
+
+.down-btn {
+  display: block;
+  background: svg-load('portf_arrow_down.svg', fill=#c2d3c9) center center no-repeat;
+  background-size: cover ;
+}
+.down-btn.hero__down-btns {
+  width: 26px;
+  height: 16px;
+  position: absolute;
+  top:513px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}

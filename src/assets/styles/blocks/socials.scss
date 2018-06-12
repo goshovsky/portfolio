@@ -1,0 +1,19 @@
+.socials {
+  text-align: center;
+}
+
+.socials__item {
+  display: inline-block;
+  margin: 0 15px;
+}
+.socials__link{
+  display: block;
+  &:hover .socials__link-icon {
+    fill:#477d37;
+  }
+}
+.socials__link-icon {
+  fill: #fff;
+  width: 100%;
+  height: 100%;
+}

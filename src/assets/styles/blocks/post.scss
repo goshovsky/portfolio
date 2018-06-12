@@ -1,0 +1,25 @@
+.post {
+  margin-bottom: 75px;
+  padding-bottom: 75px;
+  position: relative;
+  &:after {
+    border-bottom: 4px solid #ecebe4;
+    content: "";
+    display: block;
+    height: 0;
+    width: 100%;
+    top: 100%;
+    position: absolute;
+  }
+}
+
+.post__title {
+  color:#566358;
+  font-size: 36px;
+}
+.post__date {
+  color: #4e8839;
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}

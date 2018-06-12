@@ -1,0 +1,21 @@
+.menu-links{
+  display: flex;
+  justify-content: space-around;
+}
+.menu__item {
+  display: block;
+  width: 100%;
+}
+.menu__link {
+  display: block;
+  text-align: center;
+  padding: 15px 0;
+  background-color:#639055;
+  color: #fff;
+  text-decoration: none;
+  &:hover {
+    background-color:#477d37;
+    text-decoration: none;
+
+  }
+}

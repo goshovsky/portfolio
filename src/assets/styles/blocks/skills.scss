@@ -1,0 +1,40 @@
+/*skills*/
+
+.skill {
+  display: block;
+  position: relative;
+  width: 110px;
+  height: 110px;
+  margin: 0;
+}
+
+.skill__figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.skill__circle {
+  fill: transparent;
+  stroke: #ccc;
+  stroke-width: 20px;
+}
+
+.skill__circle_above {
+  stroke: #77a266;
+  stroke-dasharray: 251;
+  stroke-dashoffset: 50;
+}
+
+.skill__title {
+  color: #77a266;
+  font-size: 13px;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  margin: 0 -50% 0 0;
+}

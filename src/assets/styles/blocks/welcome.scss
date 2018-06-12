@@ -1,10 +1,56 @@
-.inlined-svg {
-  background: svg-load('github.svg', fill=$green) center center no-repeat;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-  
+.welcome {
+  background: url('/assets/images/water.jpg') top center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+}
+.welcome__header-link {
+  top: 20px;
+  right: 20px;
+  position: absolute;
+
+}
+.btn-auth {
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 12px 20px;
+  border: 1px solid #fff;
+  border-radius: 20px;
   &:hover {
-    background-image: svg-load('github.svg', fill=red);
+    text-decoration: none;
+    background-color: #4e8839;
+    border-color: #729e19;
+  }
+}
+.welcome__clip {
+  background-color: rgb(18,38,32,0.5);
+  width: 380px;
+  top: 50%;
+  margin: 0 -50% 0 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  overflow: hidden;
+}
+.welcome__user{
+  padding: 40px 0;
+}
+.social-links {
+  margin: 0 auto;
+}
+
+.welcome_menu {
+  margin-top: 40px;
+  border-radius: 10px;
+}
+.socials__link-icon.socials__link-icon_gray {
+  fill: #96a59c;
+  width: 30px;
+  height: 25px;
+  &:hover{
+    fill:#477d37;
   }
 }

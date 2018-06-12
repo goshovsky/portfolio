@@ -5,26 +5,26 @@ block variables
 block content
     section.welcome
         .welcome__header-link
-            a(href="").btn.btn-auth Авторизоваться
+            a(href="").btn-auth Авторизоваться
         .welcome__clip
-            .user
+            .user.welcome__user
                 .user__image
-                    img.user_avatar
+                    img(src="/assets/images/avatar.jpg").user__avatar
                 .user__description
-                    .user__name Владимир Астахов
+                    .user__name Гошовский Артём
                     .user__info Личный сайт разработчика
             .social-links
                 -
                     var socials = [
                         ['vk', 'http://vk.com'],
-                        ['gh', 'http://gh.com'],
-                        ['in', 'http://in.com']
+                        ['github', 'http://github.com'],
+                        ['in', 'http://linkedin.com']
                     ]
                 ul.socials
                     each item in socials
                         li.socials__item
                             a(href=`${item[1]}`).socials__link
-                                +icon(item[0], 'socials__link-icon')
+                                +icon(item[0], 'socials__link-icon socials__link-icon_gray')
             .welcome_menu
                 -
                     var links = [
@@ -35,4 +35,4 @@ block content
                 ul.menu-links
                     each item in links
                         li.menu__item
-                            a(href=`${item[1]}`).menu__link #{item[2]}
+                            a(href=`${item[1]}`).menu__link #{item[0]}
