@@ -30,45 +30,21 @@
 
 .blog {
   position:relative;
-}
-.triangles {
-  width: 100%;
-  float: left;
-}
-.triangle.blog__triangle {
-  width: 50%;
-  height: 100px;
-  bottom:100%;
-  position: absolute;
-  fill: #ffffff;
-}
-.triangles__left, .triangles__right {
-  width:100%;
-  float:left;
-  position: relative;
-}
-.triangles__right {
-  .triangle {
+  &__triangles {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
     right: 0;
   }
 }
-
 .blog-content {
+  padding-top: 50px;
+  height: 100%;
   width: 1200px;
   margin: 0 auto;
-  padding: 70px 0 200px 0;
-  float: left;
-}
-
-
-.blog__left {
-  float: left;
-  width: 45%;
-}
-
-.blog_right {
-  float: left;
-  width: 55%;
+  display: grid;
+  grid-template: "left right" 100% / 40% 60%;
+  position: relative;
 }
 
 .sidebar {

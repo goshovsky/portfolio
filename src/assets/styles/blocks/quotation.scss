@@ -1,0 +1,15 @@
+.quotation {
+  text-align: left;
+
+  &__text {
+    font-size: 16px;
+    font-style: italic;
+    color:#dedfdf;
+  }
+  &__author {
+    font-size: 16px;
+    font-style: italic;
+    color:#ffffff;
+    font-weight: bold;
+  }
+}

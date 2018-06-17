@@ -4,62 +4,18 @@ block variables
   - var title = 'Мои работы';
 
 block scripts
-  script(src='blog.bundle.js')
+  script(src='works.bundle.js')
 
 block content
-   section.hero
-       -
-            var socials = [
-                ['vk', 'http://vk.com'],
-                ['gh', 'http://gh.com'],
-                ['in', 'http://in.com']
-            ]
-       .hero__links
-            ul.socials
-                each item in socials
-                    li.socials__item
-                        a(href=`${item[0]}`).socials__link
-                            +icon(item[1], 'socials__link-icon')
-       .hero__menu
-            a(href="").hamburger
-
-       .hero__title
-            .section-title
-                img(src="", alt="").section-title__pic
-
-            .user.hero__user
-                .user__pic
-                    img.user__pic-img
-                .user__description
-                .user__name Владимир Астахов
-                .user__info Личный сайт разработчика
-
-       a(href="").down-btn.hero__down-btns
+   include ../common/hero
    section.works
-        .triangles
-            .triangles__left
-            .triangles__right
-
+        .works__triangles
+            +section-triangles('#fff', '#fff')
         .works__title
             .block-title.block-title_my-works Мои работы
-        .works__left
-            .works__about-site
-                .site-info
-                    .site-info__title Сайт школы онлайн образования
-                    .site-info__technology html, css, javascript
-                    .site-info__button
-                        a(href="").btn.site-info__link
-        .works_right
-            .works__slider
-                .slider
-                    .slider__list
-                        .slider__item
-                            img(src="", alt="").slider__item-img
-                    .slider__nav
-                        .slider__down-btn
-                            .slider__arrow-down
-                        .slider__up-btn
-                            .slider__arrow-up
+
+   .slider-container
+        #slider-component
    section.about-me
         .about-me__title
             .block-title.block-title_about-me Мои работы

@@ -2,26 +2,27 @@
   background-color: rgba(255, 255, 255, 0.5);
   width: 380px;
   padding: 40px 0;
-}
-.contacts__title {
-  margin-bottom: 20px;
-  text-align: center;
-  position: relative;
-}
-.contacts__list {
-  padding: 0 40px;
-}
-.contacts__item {
-  display: block;
-}
-.contacts-row {
-  display: inline-block;
-}
-.contacts-row.contacts__title {
 
-}
-.contacts__icon-img {
-  width: 30px;
-  height: 20px;
-  fill: $green;
+  &__title {
+    margin-bottom: 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  &__list {
+    padding: 0 40px;
+  }
+
+  &__item {
+    display: block;
+  }
+
+  &-row {
+    display: inline-block;
+  }
+
+  &__icon-img {
+    width: 30px;
+    height: 20px;
+  }
 }

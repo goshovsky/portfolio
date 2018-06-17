@@ -5,9 +5,23 @@ mixin icon(iconName, iconClass)
 mixin image(imagePath, imageAlt, imageClass)
   img(src=`/assets/images/${imagePath}`, alt=`${imageAlt}`, class=`${imageClass}`)
 
-mixin socials(socials, modClass)
+mixin socials(modClass)
+  -
+    var socials = [
+      ['http://vk.com', 'vk'],
+      ['http://github.com', 'github'],
+      ['http://linkedin.com', 'in']
+    ]
   ul.socials(class=`${modClass}`)
     each item in socials
       li.socials__item
         a(href=`${item[0]}`).socials__link
           +icon(item[1], 'socials__link-icon')
+mixin section-triangles(fill1, fill2)
+  div.section-triangles
+    .section-triangles__right
+      svg(fill=`${fill1}` viewBox="0 0 1000 150" preserveAspectRatio="none")
+        polygon(points="0,0 0,150 1000,150")
+    .section-triangles__left
+      svg(fill=`${fill2}` viewBox="0 0 1000 150" preserveAspectRatio="none")
+        polygon(points="1000,0 1000,150 0,150")

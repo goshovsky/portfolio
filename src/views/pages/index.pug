@@ -1,6 +1,28 @@
-extends ../auth.layout.pug
+extends ../main.layout.pug
 
+block variables
+  - var title = 'Welcome';
 block content
-  .hello-world
-    +icon('check', 'hello-world__block')
-    .inlined-svg
+    section.welcome
+        .welcome__header-link
+            a(href="").btn-auth Авторизоваться
+        .welcome__clip
+            .user.welcome__user
+                .user__image
+                    img(src="/assets/images/avatar.jpg").user__avatar
+                .user__description
+                    .user__name Гошовский Артём
+                    .user__info Личный сайт разработчика
+            .social-links
+                +socials('welcome_socials')
+            .welcome_menu
+                -
+                    var links = [
+                        ['Мои работы','/works.html'],
+                        ['Обо мне','/about.html'],
+                        ['Блог','/blog.html']
+                    ]
+                ul.menu-links
+                    each item in links
+                        li.menu__item
+                            a(href=`${item[1]}`).menu__link #{item[0]}

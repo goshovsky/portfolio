@@ -1,10 +1,4 @@
 footer.internal-footer
-    -
-        var footer_socials = [
-            ['http://vk.com', 'vk'],
-            ['http://github.com', 'github'],
-            ['http://linkedin.com', 'in']
-        ]
     .internal-footer__wrapper
         .internal-footer__row
             .internal-footer__col
@@ -17,7 +11,7 @@ footer.internal-footer
                                 li.menu__item
                                     a(href="").menu__link.menu-link-footer #{item}
                 .internal-footer__socials
-                    +socials(footer_socials, 'socials_footer')
+                    +socials('socials_footer')
             .internal-footer__col
                 .quotation.quotation_margin
                     .quotation__text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.

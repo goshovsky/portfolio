@@ -7,36 +7,11 @@ block scripts
   script(src='about.bundle.js')
 
 block content
-    section.hero
-        .hero__wrap
-            -
-                var socials = [
-                    ['vk', 'http://vk.com'],
-                    ['github', 'http://github.com'],
-                    ['in', 'http://linkedin.com']
-                ]
-            .hero__links
-                ul.socials
-                    each item in socials
-                        li.socials__item
-                            a(href=`${item[1]}`).socials__link
-                                +icon(item[0], 'socials__link-icon social__link-icon_hero-socials')
-            .hero__menu
-                a(href="").hamburger
-
-            .hero__title
-                .user.hero__user
-                    .user__pic
-                        img(src="/assets/images/avatar.jpg").user__avatar
-                    .user__description
-                    .user__name Гошовский Артём
-                    .user__info Личный сайт разработчика
-            a(href="").down-btn.hero__down-btns
-
+    include ../common/hero
     section.about
+        .about__triangles
+            +section-triangles('#efeee9', '#fff')
         .about__left
-            svg(viewbox="0 0 1000 100" preserveAspectRatio="none" class="about__triangle triangle triangle_fill_beige")
-                polygon(points="0,0 0,100 1000,100")
             .about__left-wrapper
                 .about__left-title
                     .block-title.about__left-title_big-size Обо мне
@@ -51,33 +26,13 @@ block content
                             p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In tempore non modi ex quia deserunt, beatae sint explicabo consequuntur maxime cupiditate, aliquam repudiandae tenetur natus labore voluptatum fugiat totam veritatis.
                             p Lorem, ipsum dolor sit amet consectetur adipisicing elit. In tempore non modi ex quia deserunt, beatae sint explicabo consequuntur maxime cupiditate, aliquam repudiandae tenetur natus labore voluptatum fugiat totam veritatis.
         .about__right
-            svg(viewbox="0 0 1000 100" preserveAspectRatio="none" class="about__triangle triangle triangle_fill_white")
-                polygon(points="0,100 0,100 1000,100 1000,0")
             .about__right-wrapper
                 .about__right-title
                     .block-subtitle Чем я могу быть вам полезен
                 .about__right-description.text-content
                     p Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste velit mollitia nemo reprehenderit ipsam corrupti deleniti, blanditiis sit magni fuga eveniet hic sint illo? Quae harum voluptatem optio ipsum blanditiis.
                 .about__right-content
-                    -
-                        var skills = [
-                            ['Frontend', [['Html5', 30], ['css3', 50], ['javascript', 70]]],
-                            ['Backend', [['Html5', 30], ['css3', 50], ['javascript', 70]]],
-                            ['Workflow', [['Html5', 30], ['css3', 50], ['javascript', 70]]]
-                        ]
-
-                    ul.skills-list
-                        each skillsrow in skills
-                            li.skills-list__item.skills-row
-                                .skills-row__title #{skillsrow[0]}
-                                ul.skills-row__list
-                                    each skill in skillsrow[1]
-                                        li.skills-row__item
-                                            figure.skill(data-percents="70")
-                                                svg(viewBox="0 0 100 100" preserveAspectRatio="none").skill__figure
-                                                    circle(cx="50" cy="50" r="40").skill__circle.skill__circle_under
-                                                    circle(cx="50" cy="50" r="40").skill__circle.skill__circle_above
-                                                .skill__title #{skill[0]}
+                    #skills-container
 
     .clearfix
     section.map

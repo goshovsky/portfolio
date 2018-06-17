@@ -1,0 +1,15 @@
+
+.down-btn {
+  display: block;
+  background: svg-load('portf_arrow_down.svg', fill=#c2d3c9) center center no-repeat;
+  background-size: cover ;
+}
+.down-btn.hero__down-btns {
+  width: 26px;
+  height: 16px;
+  position: absolute;
+  top:513px;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%)
+}
