@@ -18,32 +18,29 @@ block content
         #slider-component
    section.about-me
         .about-me__title
-            .block-title.block-title_about-me Мои работы
+            .block-title.block-title_about-me Что обо мне говорят
         .about-me__reviews
-            ul.reviews
+        ul.reviews__list
+            each item in [1, 2]
                 li.reviews__item
                     .reviews__avatar
-                        img(src="").reviews__avatar-image
-                    .reviews__text Review text
-                    .reviews__author Author name
-                    .reviews__role преподаватель
-                li.reviews__item
-                    .reviews__avatar
-                        img(src="").reviews__avatar-image
-                    .reviews__text Review text
-                    .reviews__author Author 2 name
-                    .reviews__role преподаватель
-
-        .about-me__form
-            .contact-form
-                .contact-form__title
-                    .block-title.contact-form_form-title  Связаться со мной
-                form.contact-form__elements
-                    input(type="text", placeholder="Имя").contact-form__input
-                    input(type="text", placeholder="Email").contact-form__input
-                    textarea(placeholder="Ваше сообщение").contact-form__textarea
-                    .contact-form__btns
-                        button(type="submit").contact-form__btn Отправить
-                        button(type="submit").contact-form__btn Очистить
-
-
+                        .reviews__avatar-pic
+                            +image('user.jpg', 'review author', 'reviews__avatar-image')
+                    .reviews__text.text-block
+                        p Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+                    .reviews__author
+                        .reviews__author-data
+                            .reviews__name Ковальчук Дмитрий
+                            .reviews__occ - основатель Loftschool
+        .reviews__form-container
+            form.modal-form.modal-form_blured
+                .modal-form__bg
+                .modal-form__title
+                    .block-subtitle Связаться со мной
+                .modal-form__container
+                    input(type="text" placeholder="Имя").modal-form__input
+                    input(type="text" placeholder="Email").modal-form__input
+                    textarea(placeholder="Ваше сообщение").modal-form__input.modal-form__input_textarea
+                .modal-form__buttons
+                    button.modal-form__button Отправить
+                    button.modal-form__button Очистить
