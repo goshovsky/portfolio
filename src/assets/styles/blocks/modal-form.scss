@@ -3,78 +3,71 @@
   background: rgba(#ccc, .5);
   position: relative;
   padding: 20px;
-}
 
-.modal-form__bg {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
+  &__title {
+    text-align: center;
+    margin-bottom: 38px;
+    position: relative;
+  }
 
-.modal-form__title {
-  text-align: center;
-  margin-bottom: 38px;
-  position: relative;
-}
+  &__controlls-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
 
-.modal-form__controlls-title {
-  font-weight: 600;
-  margin-bottom: 8px;
-}
+  &__container {
+    position: relative;
+  }
 
-.modal-form__container {
-  position: relative;
-}
+  &__row {
+    margin-bottom: 20px;
+  }
 
-.modal-form__row {
-  margin-bottom: 20px;
-}
+  &__input {
+    display: block;
+    border-radius: 25px;
+    border: 0 none;
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 20px;
 
-.modal-form__input {
-  display: block;
-  border-radius: 25px;
-  border: 0 none;
-  width: 100%;
-  padding: 15px 20px;
-  margin-bottom: 20px;
+    &_textarea {
+      height: 140px;
+      resize: vertical;
+    }
+  }
 
-  &_textarea {
-    height: 140px;
-    resize: vertical;
+  &__buttons {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: flex;
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+  }
+
+  &__button {
+    flex: 1;
+    padding: 15px;
+    background: $green;
+    color: #fff;
+    transition: .3s;
+    font-weight: 600;
+    border-right: 2px solid #acc3a8;
+    white-space: nowrap;
+
+    &:hover {
+      background: #4e8839;
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &__controlls {
+    text-align: center;
   }
 }
 
-.modal-form__buttons {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  right: 0;
-  display: flex;
-  border-radius: 0 0 10px 10px;
-  overflow: hidden;
-}
-
-.modal-form__button {
-  flex: 1;
-  padding: 15px;
-  background: $green;
-  color: #fff;
-  transition: .3s;
-  font-weight: 600;
-  border-right: 2px solid #acc3a8;
-  white-space: nowrap;
-  
-  &:hover {
-    background: #4e8839;
-  }
-
-  &:last-child {
-    border: none;
-  }
-}
-
-.modal-form__controlls {
-  text-align: center;
-}
