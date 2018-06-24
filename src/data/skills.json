@@ -2,7 +2,7 @@
   {
     "skillsGroup": "Frontend",
     "skills": {
-      "html5": 850,
+      "html5": 85,
       "css3": 90,
       "JavaScript": 70
     }
@@ -21,6 +21,13 @@
       "Git": 80,
       "Gulp": 70,
       "Linux": 60
+    }
+  },
+  {
+    "skillsGroup": "Blockchain",
+    "skills": {
+      "Solidity": 35,
+      "Web3.js": 20
     }
   }
 ]

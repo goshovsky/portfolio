@@ -1,0 +1,180 @@
+.auth-form {
+  position: relative;
+
+  &__title {
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    padding: 20px 20px 0 20px;
+  }
+
+  &__controlls-title {
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+
+  &__container {
+    position: relative;
+    padding: 20px;
+  }
+
+  &__row {
+    margin-bottom: 20px;
+  }
+
+  &__input-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 25px;
+    border: 0 none;
+    width: 100%;
+    margin-bottom: 20px;
+    position: relative;
+    background-color: #fff;
+    overflow: hidden;
+  }
+
+  &__input {
+    display: block;
+    border-radius: 25px;
+    border: 0 none;
+    width: 100%;
+    position: relative;
+    padding: 15px 20px;
+  }
+
+  &__input-icon {
+    width: 18%;
+    background-color: #f0efe9;
+    display: block;
+    height: 45px;
+
+  }
+
+  &__captcha {
+    text-align: center;
+  }
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__checkbox + label:before {
+    content: "";
+    color: #fff;
+    background-color:#fff ;
+    display: inline-block;
+    font-size: 16px;
+    height: 16px;
+    width: 16px;
+    text-align: center;
+    vertical-align: middle;
+    transition: color ease .3s;
+    border-radius: 2px;
+    padding: 2px;
+    margin: -5px 15px 0 0;
+  }
+  &__checkbox:checked + label:before {
+    color: #f0efe9;
+    background:#6c9c5a svg-load('check.svg', fill=#f0efe9) center center no-repeat;
+    background-size: contain;
+  }
+  &__checkbox + label:after {
+    display: none;
+  }
+  &__checkbox-label {
+    color: #fff;
+    cursor: pointer;
+  }
+
+  &__question {
+    color: #fff;
+    font-weight: bold;
+    margin: 10px auto;
+  }
+
+  &__radio-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  &__radio-item {
+    width: 50%;
+  }
+  &__radio-button {
+    display: none;
+  }
+  &__radio-label {
+    color: white;
+    cursor: pointer;
+  }
+  &__radio-button + label:before {
+    background-color: #fff;
+    border-radius: 50%;
+    color: #6c9c5a;
+    content: "\26AB";
+    display: inline-block;
+    font-size: 0;
+    height: 16px;
+    margin: -5px 15px 0 0;
+    text-align: center;
+    transition: font-size .3s ease;
+    vertical-align: middle;
+    width: 22px;
+    padding-bottom: 5px;
+  }
+
+  &__radio-button:checked + label:before {
+    font-size: 16px;
+  }
+
+  &__buttons {
+    left: 0;
+    right: 0;
+    display: flex;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+  }
+
+  &__button {
+    flex: 1;
+    padding: 15px;
+    background: $green;
+    color: #fff;
+    transition: .3s;
+    font-weight: 600;
+    border-right: 2px solid #acc3a8;
+    white-space: nowrap;
+
+    &:hover {
+      background: #4e8839;
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  &__controlls {
+    text-align: center;
+  }
+}
+.block-subtitle.block-subtitle_white {
+  color: white;
+  &::after {
+    border-bottom: 2px solid #fff;
+  }
+}
+.auth-form__input-icon.auth-form__input-icon__login {
+  background:#f0efe9 svg-load('login.svg', fill=#c4cbcd) center center no-repeat;
+}
+
+.auth-form__input-icon.auth-form__input-icon__password{
+  background:#f0efe9 svg-load('password.svg', fill=#c4cbcd) center center no-repeat;
+}
+

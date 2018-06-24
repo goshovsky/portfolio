@@ -18,15 +18,23 @@
 }
 
 .skill__circle {
+  width: 100%;
+  height: 100%;
+  position: absolute;
   fill: transparent;
-  stroke: #ccc;
-  stroke-width: 20px;
+  stroke-width: 20;
+  &_under {
+    stroke: $light-grey;
+  }
+  &_above {
+    stroke: $green;
+  }
 }
 
 .skill__circle_above {
-  stroke: #77a266;
   stroke-dasharray: 251;
-  stroke-dashoffset: 50;
+  stroke-dashoffset: 251;
+  transform-origin: center;
 }
 
 .skill__title {

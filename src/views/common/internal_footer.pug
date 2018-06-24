@@ -8,7 +8,7 @@ footer.internal-footer
                     nav.menu
                         ul.menu__list
                             each item in [['Мои работы', 'works.html'], ["Обо мне", 'about.html'], ["Блог", 'blog.html'], ["Авторизация", '/']]
-                                li.menu__item
+                                li.menu__item.menu-item-footer
                                     a(href=`${item[1]}`).menu__link.menu-link-footer #{item[0]}
                 .internal-footer__socials
                     +socials('socials_footer')
