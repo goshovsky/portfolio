@@ -2,6 +2,9 @@
   margin-bottom: 75px;
   padding-bottom: 75px;
   position: relative;
+  @include notebook {
+    padding: 0 20px;
+  }
   &:after {
     border-bottom: 4px solid #ecebe4;
     content: "";
@@ -10,16 +13,39 @@
     width: 100%;
     top: 100%;
     position: absolute;
+    @include notebook {
+      width: 93%;
+      top: 110%;
+    }
   }
-}
-
-.post__title {
-  color:#566358;
-  font-size: 36px;
-}
-.post__date {
-  color: #4e8839;
-  font-size: 16px;
-  margin-bottom: 20px;
-  margin-top: 10px;
+  &__title {
+    color:#566358;
+    font-size: 36px;
+    @include tablets {
+      font-size: 30px;
+    }
+    @include phone {
+      font-size: 21px;
+    }
+  }
+  &__date {
+    color: #4e8839;
+    font-size: 16px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    @include tablets {
+      font-size: 14px;
+    }
+    @include phone {
+      font-size: 13px;
+    }
+  }
+  &__text {
+    p {
+      margin-bottom: 20px;
+    }
+    @include tablets {
+      font-size: 14px;
+    }
+  }
 }

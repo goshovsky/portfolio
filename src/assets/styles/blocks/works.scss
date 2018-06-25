@@ -18,10 +18,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include phone {
+      width: 250px;
+      height: 80px;
+      background-position: center center;
+    }
   }
 }
 
 .block-title_my-works {
   font-size: 63px;
   padding-bottom: 0;
+  @include tablets {
+    font-size: 50px;
+  }
+  @include phone {
+    font-size: 34px;
+  }
 }

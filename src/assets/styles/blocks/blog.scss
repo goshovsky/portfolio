@@ -14,6 +14,12 @@
     position: relative;
     font-size: 63px;
     margin-bottom: 30px;
+    @include tablets {
+      font-size: 50px;
+    }
+    @include phone {
+      font-size: 34px;
+    }
     &:after {
       content:"";
       width:90px;
@@ -23,7 +29,9 @@
       left: 50%;
       transform: translate(-50%, -50%);
       top: 100%;
-      margin: 0 -50% 0 0;
+      @include phone {
+        width:50px;
+      }
     }
   }
 }
@@ -45,23 +53,29 @@
   display: grid;
   grid-template: "left right" 100% / 40% 60%;
   position: relative;
+  @include notebook {
+    width:100%;
+  }
+  @include tablets {
+    grid-template: "right" 100% / 1fr;
+  }
+
 }
 
 .sidebar {
   padding-right: 100px;
   text-align: right;
+
+  @include tablets {
+    display: none;
+  }
+
 }
 
 .menu-left__item {
   display: inline-block;
   margin-bottom: 40px;
   width: 260px;
-}
-
-.menu-left__link {
-  font-size:16px;
-  color: #455a64;
-  text-decoration: none;
   position: relative;
   &:hover {
     color:#4e8839;
@@ -69,7 +83,8 @@
     &:after {
       content: "";
       width: 0;
-      height: 35px;
+      min-height: 35px;
+      height: 100%;
       display: block;
       border-right:3px solid #4e8839;
       position: absolute;
@@ -78,6 +93,13 @@
       right: -15px;
     }
   }
+}
+
+.menu-left__link {
+  font-size:16px;
+  color: #455a64;
+  text-decoration: none;
+  position: relative;
 }
 
 .blog_empty {

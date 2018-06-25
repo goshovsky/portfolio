@@ -6,6 +6,12 @@
     height: 150px;
     display: flex;
     align-items: flex-end;
+    @include tablets {
+      height: 100px;
+    }
+    @include phone {
+      height: 50px;
+    }
 
     svg {
       width: 100%;

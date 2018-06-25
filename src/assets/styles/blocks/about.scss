@@ -3,6 +3,9 @@
   display: grid;
   grid-template: "left right" 100% / 1fr 1fr;
   position: relative;
+  @include tablets {
+    grid-template: "left" 100% "right" 100% / 1fr;
+  }
 
   &__left, &__right {
     display: flex;
@@ -15,11 +18,20 @@
     background-color: #ebefe2;
     align-items: flex-end;
 
+    @include tablets {
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
   }
 
   &__right {
     grid-area: right;
     background-color: #ffffff;
+    @include tablets {
+      align-items: center;
+      text-align: center;
+    }
   }
 
   &__left-wrapper, &__right-wrapper  {
@@ -28,6 +40,9 @@
 
   &__left-wrapper {
     justify-items: end;
+    @include tablets {
+      justify-items: center;
+    }
   }
 
   &__left-wrapper {
@@ -42,25 +57,45 @@
     position: relative;
     margin: -30px auto 0  auto;
     padding-top: 30px;
+    @include tablets {
+      width: 250px;
+      margin: 20px auto 0  auto;
+    }
   }
 
   &__left-title_big-size {
     font-size: 63px;
+    @include tablets {
+      font-size: 50px;
+    }
+    @include phone {
+      font-size: 34px;
+    }
   }
 
   &__left-content {
     padding: 0 75px;
+    @include phone {
+      padding: 0;
+    }
   }
 
   &__right-content {
     padding: 0 37px;
+    @include tablets {
+      justify-items: center;
+    }
+    @include phone {
+      padding: 0;
+    }
+
   }
 
   &__right-title {
     margin: 0 auto;
     text-align: center;
     position: relative;
-    width: 260px;
+    width: 270px;
   }
 
   &__triangles {
@@ -93,5 +128,9 @@
   }
 }
 
-
+.about__triangles .section-triangles__left svg {
+  @include tablets {
+    fill: #efeee9;
+  }
+}
 

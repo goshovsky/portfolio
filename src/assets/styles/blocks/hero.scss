@@ -16,7 +16,10 @@
   &__links {
     position: absolute;
     left: 30px;
-    top: 30px
+    top: 30px;
+    @include tablets {
+      left: 0;
+    }
   }
 
   &__links .socials__link-icon {
@@ -52,4 +55,10 @@
   display: block;
   width: 40px;
   height:35px;
+
+  @include tablets {
+    width: 27px;
+    height:25px;
+    background-size: contain;
+  }
 }

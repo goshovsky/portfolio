@@ -3,6 +3,9 @@
   vertical-align: middle;
   margin-right: 37px;
   margin-bottom: 37px;
+  @include tablets {
+    margin: 0 18px 18px 18px;
+  }
 }
 
 .skills-list__title {

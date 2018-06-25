@@ -15,6 +15,11 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    @include phone {
+      width: 250px;
+      height: 80px;
+      background-position: center center;
+    }
   }
 }
 
@@ -23,6 +28,10 @@
   font-size: 63px;
   padding-bottom: 0;
   line-height: 1.1;
+  @include phone {
+    font-size: 34px;
+    width: 250px;
+  }
   &::after{
     margin: 25px -50% 0 0;
   }

@@ -4,7 +4,9 @@
     "skills": {
       "html5": 85,
       "css3": 90,
-      "JavaScript": 70
+      "JavaScript": 70,
+      "JQuery": 90,
+      "VueJs": 20
     }
   },
   {
@@ -20,7 +22,7 @@
     "skills": {
       "Git": 80,
       "Gulp": 70,
-      "Linux": 60
+      "Jira": 60
     }
   },
   {

@@ -1,8 +1,4 @@
-@mixin tablets {
-  @media screen and (max-width: 768px) {
-    @content;
-  }
-}
+
 
 .slider {
   height: 100vh;
@@ -21,6 +17,9 @@
       "buttons" 200px
       / 1fr;
   }
+  @include phone {
+    height: auto;
+  }
 
   &__info-container {
     grid-area: info;
@@ -32,9 +31,20 @@
   &__info-button {
     width: 200px;
     border-radius: 22px;
-    background-color: #6c9c5a;
+    background-color:#6c9c5a;
     text-align: center;
     margin: 25px auto;
+    position: relative;
+    &:before {
+      content: '';
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      top: 50%;
+      left: 25px;
+      transform: translate(-50%, -50%);
+      background:svg-load('link.svg', fill=#ffffff) 0 center no-repeat / contain;
+    }
     &:hover {
       background-color: #4e8839;
     }
@@ -44,7 +54,7 @@
       justify-content: center;
       color: #fff;
       text-decoration: none;
-      padding: 12px;
+      padding: 12px 12px 12px 35px;
     }
 
   }
