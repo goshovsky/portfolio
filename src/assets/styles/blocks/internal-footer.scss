@@ -1,10 +1,11 @@
 .internal-footer {
-  height: 185px;
-  margin-top: -185px;
   text-align: center;
-  position: relative;
-  float: left;
+  position: absolute;
   width: 100%;
+  bottom: 0;
+  @include tablets {
+    font-size: 14px;
+  }
   background-color: rgb(18,38,32,0.5);
   h2 {
     font-size: 16px;
@@ -14,28 +15,59 @@
   &__wrapper {
     max-width: 1800px;
     margin: 0 auto;
-    height: 145px;
+    padding-bottom: 25px;
   }
 
   &__row {
     padding-top: 30px;
     display: grid;
-    grid-template: "column column column"  / 1fr 1fr 1fr;
+    grid-template: "left center right"  / 1fr 1fr 1fr;
 
+    @include tablets {
+      grid-template:
+              "left center"
+              "right right"
+                  / 1fr 1fr;
+    }
     @include phone {
-      grid-template: "column column" "column"  / 1fr 1fr;
+      grid-template:
+              "left"
+              "center"
+              "right"
+                  / 1fr;
     }
   }
 
   &__col {
     border-right: 1px solid rgba(#ccc, .5);
     padding: 0 20px;
+    @include tablets {
+      border:none;
+    }
+    @include phone {
+      border-bottom: 1px solid rgba(#ccc, .5);
+      margin: 0 10px;
+      padding: 15px 10px;
+    }
+    &-block-left {
+      grid-area: left;
+    }
+    &-block-center {
+      grid-area: center;
+    }
+    &-block-right {
+      grid-area: right;
+      @include tablets {
+        text-align: center;
+        padding-top: 25px;
+      }
+    }
     &:last-child {
       border: none;
-      padding-right: 0;
+      padding-right: 10px;
     }
     &:first-child {
-      padding-left: 0;
+      padding-left: 10px;
     }
   }
 
@@ -69,6 +101,9 @@
   background: none;
   display: inline-block;
   margin: 0 10px;
+  @include tablets {
+    margin: 0 8px;
+  }
   padding: 0;
   &:hover {
     background: none;

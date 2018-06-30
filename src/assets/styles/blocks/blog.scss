@@ -102,8 +102,10 @@
   position: relative;
 }
 
-.blog_empty {
-  width: 100%;
-  height: 185px;
+.blog .internal-footer {
+  position: relative;
 }
 
+.internal-footer.blog-footer {
+  position: relative;
+}

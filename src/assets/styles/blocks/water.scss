@@ -1,5 +1,5 @@
 
-.background {
+.Background {
   position: absolute;
   top: 0;
   right: 0;
@@ -7,7 +7,7 @@
   left: 0;
 }
 
-.background::after {
+.Background::after {
   content: '';
   position: absolute;
   top: 0;

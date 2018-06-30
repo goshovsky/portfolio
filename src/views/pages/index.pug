@@ -1,8 +1,13 @@
 extends ../main.layout.pug
 
+block scripts
+    script(src='auth.bundle.js')
+
 block variables
   - var title = 'Welcome';
 block content
+    .Background
+        canvas.Background-canvas
     section.welcome
         .welcome__header-link
             a(href="").btn-auth Авторизоваться
@@ -30,12 +35,12 @@ block content
         .auth__form-container
             form.auth-form
                 .auth-form__title
-                    .block-subtitle.block-subtitle_white Связаться со мной
+                    .block-subtitle.block-subtitle_white Авторизоваться
                 .auth-form__container
-                    .auth-form__input-item
+                    .auth-form__input-item.input-success
                         i.auth-form__input-icon.auth-form__input-icon__login
                         input(type="text" placeholder="Логин").auth-form__input
-                    .auth-form__input-item
+                    .auth-form__input-item.input-error
                         i.auth-form__input-icon.auth-form__input-icon__password
                         input(type="password" placeholder="Пароль").auth-form__input
                     .auth-form__captcha
@@ -44,10 +49,10 @@ block content
                         .auth-form__question Вы точно не робот?
                         .auth-form__radio-buttons
                             .auth-form__radio-item
-                                input(type="radio" id="radio").auth-form__radio-button
+                                input(type="radio" name="no-robot" id="radio").auth-form__radio-button
                                 label(for="radio").auth-form__radio-label Да
                             .auth-form__radio-item
-                                input(type="radio" id="radio2").auth-form__radio-button
+                                input(type="radio" name="no-robot" id="radio2").auth-form__radio-button
                                 label(for="radio2").auth-form__radio-label Не уверен
 
                 .auth-form__buttons

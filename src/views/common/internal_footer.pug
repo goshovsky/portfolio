@@ -1,9 +1,9 @@
-footer.internal-footer
+footer.internal-footer(class=footerModificator ? 'blog-footer' : '')
     .internal-footer__wrapper
         .internal-footer__row
-            .internal-footer__col
+            .internal-footer__col.internal-footer__col-block-left
                 .internal-footer__text-left Этот сайт я сделал в рамках обучения в Школе онлайн образования LoftSchool.
-            .internal-footer__col
+            .internal-footer__col.internal-footer__col-block-center
                 .internal-footer__menu
                     nav.menu
                         ul.menu__list
@@ -12,7 +12,7 @@ footer.internal-footer
                                     a(href=`${item[1]}`).menu__link.menu-link-footer #{item[0]}
                 .internal-footer__socials
                     +socials('socials_footer')
-            .internal-footer__col
+            .internal-footer__col.internal-footer__col-block-right
                 .quotation.quotation_margin
                     .quotation__text Всегда пишите код так, будто сопровождать его будет склонный к насилию психопат, который знает, где вы живете.
                     .quotation__author - Martin Goldin

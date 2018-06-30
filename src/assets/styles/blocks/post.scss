@@ -1,7 +1,9 @@
 .post {
-  margin-bottom: 75px;
-  padding-bottom: 75px;
+  margin-top: 75px;
   position: relative;
+  &:last-child {
+    margin-bottom: 75px;
+  }
   @include notebook {
     padding: 0 20px;
   }
@@ -11,11 +13,9 @@
     display: block;
     height: 0;
     width: 100%;
-    top: 100%;
     position: absolute;
     @include notebook {
       width: 93%;
-      top: 110%;
     }
   }
   &__title {
@@ -41,6 +41,7 @@
     }
   }
   &__text {
+    padding-bottom: 55px;
     p {
       margin-bottom: 20px;
     }

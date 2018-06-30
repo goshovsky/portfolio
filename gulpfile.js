@@ -115,6 +115,16 @@ gulp.task("images", () => {
     .pipe(gulp.dest(`${config.DIST_DIR}/assets/images/`));
 });
 
+// просто переносим статику
+gulp.task("static", () => {
+    return gulp
+        .src([
+            `${config.SRC_DIR}/static/**/*.*`
+        ])
+        .pipe($gp.if(env === "production", $gp.imagemin()))
+        .pipe(gulp.dest(`${config.DIST_DIR}/assets/static/`));
+});
+
 // галповский вотчер
 gulp.task("watch", () => {
   gulp.watch(`${config.SRC_DIR}/styles/**/*.scss`, gulp.series("styles"));
@@ -130,7 +140,7 @@ gulp.task(
   gulp.series(
     "clean",
     "svg",
-    gulp.parallel("styles", "pug", "images", "fonts", "scripts"),
+    gulp.parallel("styles", "pug", "images", "fonts", "scripts", "static"),
     gulp.parallel("watch", "server")
   )
 );

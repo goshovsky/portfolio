@@ -36,20 +36,60 @@
     overflow: hidden;
   }
 
+  &__input-item.input-success {
+
+    .auth-form__input-icon{
+      fill: #6c9c5a;
+    }
+  }
+
+  &__input-item.input-success {
+
+     .auth-form__input-icon.auth-form__input-icon__login {
+       background:#f0efe9 svg-load('login.svg', fill=#6c9c5a) center center no-repeat;
+     }
+     .auth-form__input-icon.auth-form__input-icon__password {
+       background:#f0efe9 svg-load('password.svg', fill=#6c9c5a) center center no-repeat;
+     }
+    .auth-form__input-icon{
+      border-right: 1px solid #6c9c5a;
+    }
+    .auth-form__input {
+      border-top: 1px solid #6c9c5a;
+      border-bottom: 1px solid #6c9c5a;
+    }
+   }
+
+  &__input-item.input-error {
+
+    .auth-form__input-icon.auth-form__input-icon__login {
+      background:#f0efe9 svg-load('login.svg', fill=#e44845) center center no-repeat;
+    }
+    .auth-form__input-icon.auth-form__input-icon__password {
+      background:#f0efe9 svg-load('password.svg', fill=#e44845) center center no-repeat;
+    }
+    .auth-form__input-icon{
+      border-right: 1px solid #e44845;
+    }
+    .auth-form__input {
+      border-top: 1px solid #e44845;
+      border-bottom: 1px solid #e44845;
+    }
+  }
+
   &__input {
     display: block;
-    border-radius: 25px;
     border: 0 none;
     width: 100%;
     position: relative;
-    padding: 15px 20px;
+    padding: 16px 20px;
   }
 
   &__input-icon {
     width: 18%;
     background-color: #f0efe9;
     display: block;
-    height: 45px;
+    height: 52px;
 
   }
 
