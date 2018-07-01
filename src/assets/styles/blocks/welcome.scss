@@ -23,6 +23,7 @@
   padding: 12px 20px;
   border: 1px solid #fff;
   border-radius: 20px;
+  background: transparent;
   &:hover {
     text-decoration: none;
     background-color: #4e8839;
@@ -30,13 +31,19 @@
   }
 }
 .welcome__clip {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 410px;
+  margin: auto;
+
   background-color: rgb(18,38,32,0.5);
   width: 380px;
-  top: 50%;
-  margin: 0 -50% 0 0;
+  //top: 50%;
+  //margin: 0 -50% 0 0;
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  //transform: translate(-50%, -50%);
   border-radius: 5px;
   overflow: hidden;
   display: block;
@@ -59,4 +66,41 @@
   &:hover{
     fill:#477d37;
   }
+}
+
+
+
+.block-wrapper {
+  height: 410px;
+  left: 50%;
+  margin-left: -205px;
+  margin-top: -190px;
+  position: fixed;
+  top: 50%;
+  width: 380px;
+}
+
+
+.flip-enter-active, .flip-leave-active {
+  transition: 0.3s linear;
+}
+
+.block-wrapper {
+  perspective: 1000px;
+}
+
+.flip-leave {
+  transform: rotateY(0);
+}
+
+.flip-leave-to {
+  transform: rotateY(90deg);
+}
+
+.flip-enter {
+  transform: rotateY(-90deg);
+}
+
+.flip-enter-to {
+  transform: rotateY(0deg);
 }

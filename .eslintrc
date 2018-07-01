@@ -3,8 +3,8 @@
   "parser": "vue-eslint-parser",
   "plugins": [
     "prettier"
-  ],
-  "rules": {
+  ]
+  /*"rules": {
     "prettier/prettier": "error"
-  }
+  }*/
 }

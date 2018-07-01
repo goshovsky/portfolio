@@ -1,12 +1,14 @@
 .auth__form-container {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 410px;
+  margin: auto;
   background-color: rgb(18,38,32,0.5);
   width: 380px;
-  top: 50%;
-  margin: 0 -50% 0 0;
   position: absolute;
-  left: 50%;
-  transform: translate(-50%, -50%);
   border-radius: 5px;
   overflow: hidden;
-  display: none;
+  display: block;
 }
