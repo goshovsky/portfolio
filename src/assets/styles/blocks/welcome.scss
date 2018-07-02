@@ -70,7 +70,7 @@
 
 
 
-.block-wrapper {
+/*.block-wrapper {
   height: 410px;
   left: 50%;
   margin-left: -205px;
@@ -103,4 +103,55 @@
 
 .flip-enter-to {
   transform: rotateY(0deg);
+}*/
+
+//flip
+
+.flip-container {
+  perspective: 1000px;
+}
+/* flip the pane when hovered */
+.flip-container.active .flipper {
+  transform: rotateY(180deg);
+}
+
+.flip-container{
+  height: 425px;
+  left: 50%;
+  margin-left: -205px;
+  margin-top: -190px;
+  position: fixed;
+  top: 50%;
+  width: 380px;
+}
+
+/* flip speed goes here */
+.flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+
+/* hide back of pane during swap */
+.front, .back {
+  backface-visibility: hidden;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* front pane, placed above back */
+.front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+
+/* back, initially hidden pane */
+.back {
+  transform: rotateY(180deg);
 }

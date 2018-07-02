@@ -9,6 +9,12 @@ block scripts
 
 block content
     header.header
+        .hero__links
+            +socials('socials_about')
+        div.hero__menu
+            div(":class"="{'active': isLoading, 'disabled': !isLoading }",  @click="activeChange").hamburger.hamburger--elastic
+                .hamburger-box
+                    .hamburger-inner
         .user.blog__user
             .user__pic
                 img(src="/assets/images/avatar.jpg").user__avatar

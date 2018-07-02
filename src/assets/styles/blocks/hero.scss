@@ -50,15 +50,3 @@
   }
 }
 
-.hamburger {
-  background: svg-load('hamburger.svg', fill=#fff) center center no-repeat;
-  display: block;
-  width: 40px;
-  height:35px;
-
-  @include tablets {
-    width: 27px;
-    height:25px;
-    background-size: contain;
-  }
-}
