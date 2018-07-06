@@ -1,4 +1,5 @@
 import Vue from "vue";
+Vue.config.devtools = true;
 
 const info = {
   template: "#slider-info",
@@ -14,9 +15,9 @@ const info = {
       const wrapped = sentence
         .split("")
         .map(item => {
-          return `
-            <span class="${item === " " ? "whitespace" : ""}">${item}</span>
-          `;
+          return `<span class="${
+            item === " " ? "whitespace" : ""
+          }">${item}</span>`;
         })
         .join("");
 

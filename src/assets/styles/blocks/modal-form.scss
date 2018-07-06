@@ -71,3 +71,14 @@
   }
 }
 
+.form-errors {
+  visibility: hidden;
+  position: absolute;
+  margin-top: -28px;
+  text-align: center;
+  width: 100%;
+  color: #e44845;
+  &.show {
+    visibility: visible;
+  }
+}

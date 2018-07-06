@@ -1,63 +1,52 @@
 import Vue from "vue";
 
 const welcome = new Vue({
-    el: '#welcome',
-    data: {
-        isFlip: false,
+  el: "#welcome",
+  data: {
+    isFlip: false,
+    errors: 0,
+    login: null,
+    pass: null,
+    checkbox: null,
+    loginError: false,
+    passError: false,
+    captchaError: false,
+    loginInput: "",
+    passInput: ""
+  },
+  methods: {
+    switchCards() {
+      this.isFlip = !this.isFlip;
     },
-    methods:{
-        switchCards(){
-            this.isFlip = !this.isFlip;
-        }
-    }
-});
-
-const auth = new Vue({
-    el:'#auth',
-    data:{
-        errors:[],
-        login:null,
-        pass:null,
-        checkbox:null
+    checkForm: function(e) {
+      this.errors = 0;
+      if (!this.login) {
+        this.loginError = true;
+        this.loginInput = "error";
+      } else {
+        this.loginError = false;
+        this.loginInput = "valid";
+      }
+      if (!this.pass) {
+        this.passError = true;
+        this.passInput = "error";
+      } else {
+        this.passInput = "valid";
+        this.passError = false;
+      }
+      if (!this.checkbox) this.captchaError = true;
+      e.preventDefault();
     },
-    methods:{
-        checkForm:function(e){
-            this.errors = [];
-            if(!this.login) this.errors.push("Введите логин");
-            if(!this.pass) {
-                this.errors.push("Введите пароль");
-            }
-            if(!this.checkbox) this.errors.push("Подтвердите, что вы не робот");
-            if(!this.errors.length) return true;
-            e.preventDefault();
-        },
-        activeChange() {
-            console.log('dsfsdf');
-        }
+    cleanForm: function(e) {
+      this.login = null;
+      this.pass = null;
+      this.checkbox = null;
+      this.loginError = false;
+      this.passError = false;
+      this.captchaError = false;
+      this.loginInput = "";
+      this.passInput = "";
+      e.preventDefault();
     }
-});
-
-/*const compWelcome = {
- template: "#compWelcome"
-};
-
-const compAuth = {
- template: "#compAuth"
-};
-
-new Vue({
- el: "#animation-root",
- components: {
-  compWelcome,
-  compAuth
- },
- data: {
-  compToShow: "compWelcome"
- },
- methods: {
-  switchComponents() {
-   this.compToShow = this.compToShow === "compWelcome" ? "compAuth" : "compWelcome";
   }
- },
- template: "#animation"
-});*/
+});

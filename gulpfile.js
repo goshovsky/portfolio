@@ -52,7 +52,7 @@ gulp.task("pug", () => {
   return gulp
     .src(`${config.VIEWS_DIR}/pages/*.pug`)
     .pipe($gp.plumber())
-    .pipe($gp.pug({pretty: true}))
+    .pipe($gp.pug({ pretty: true }))
     .pipe(gulp.dest(`${config.DIST_DIR}`))
     .pipe(reload({ stream: true }));
 });
@@ -117,12 +117,9 @@ gulp.task("images", () => {
 
 // просто переносим статику
 gulp.task("static", () => {
-    return gulp
-        .src([
-            `${config.SRC_DIR}/static/**/*.*`
-        ])
-        .pipe($gp.if(env === "production", $gp.imagemin()))
-        .pipe(gulp.dest(`${config.DIST_DIR}/assets/static/`));
+  return gulp
+    .src([`${config.SRC_DIR}/static/**/*.*`])
+    .pipe(gulp.dest(`${config.DIST_DIR}/assets/static/`));
 });
 
 // галповский вотчер
@@ -151,6 +148,6 @@ gulp.task(
   gulp.series(
     "clean",
     "svg",
-    gulp.parallel("styles", "pug", "images", "fonts", "scripts")
+    gulp.parallel("styles", "pug", "images", "fonts", "scripts", "static")
   )
 );

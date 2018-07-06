@@ -1,0 +1,12 @@
+script(type="text/x-template")#work-form
+  form.modal-form
+    .modal-form__title
+      .block-subtitle Связаться со мной
+    .modal-form__container
+      div(":class"="{'show': hasErrors, '': !hasErrors }").form-errors Не все поля заполнены
+      input(type="text" placeholder="Имя" "v-model"="name").modal-form__input
+      input(type="text" placeholder="Email" "v-model"="email").modal-form__input
+      textarea(placeholder="Ваше сообщение" "v-model"="text").modal-form__input.modal-form__input_textarea
+    .modal-form__buttons
+      button(@click="checkForm").modal-form__button Отправить
+      button(@click="cleanForm").modal-form__button Очистить
