@@ -1,5 +1,6 @@
 import Vue from "vue";
-Vue.config.devtools = true;
+import axios from "axios";
+axios.defaults.baseURL = "http://webdev-api.loftschool.com/";
 
 const info = {
   template: "#slider-info",
@@ -108,8 +109,14 @@ new Vue({
     }
   },
   created() {
-    this.works = require("../../../data/works.json");
-    this.currentWork = this.works[0];
+    axios.get("/works/11").then(response => {
+      const respData = response.data;
+      respData.forEach(function(item) {
+        item.photo = "http://webdev-api.loftschool.com/" + item.photo;
+      });
+      this.works = respData;
+      this.currentWork = this.works[0];
+    });
   },
   methods: {
     handleSlide(direction) {

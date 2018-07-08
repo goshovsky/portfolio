@@ -1,4 +1,6 @@
 import Vue from "vue";
+import axios from "axios";
+axios.defaults.baseURL = "http://webdev-api.loftschool.com/";
 
 const skill = {
   template: "#skill",
@@ -40,9 +42,58 @@ new Vue({
   data: {
     skills: {}
   },
+  mutations: {
+    addSkill(state, skill) {
+      state.data.push(skill);
+    }
+  },
   created() {
-    const data = require("../../../data/skills.json");
-    this.skills = data;
+    axios.get("/skills/11").then(response => {
+      const respData = response.data;
+      let frontendSkills = [];
+      let backendSkills = [];
+      let workflowSkills = [];
+      let blockchainSkills = [];
+      respData.forEach(function(item, i) {
+        switch (item.category) {
+          case 0:
+            frontendSkills[frontendSkills.length] = item;
+            break;
+          case 1:
+            backendSkills[backendSkills.length] = item;
+            break;
+          case 2:
+            workflowSkills[workflowSkills.length] = item;
+            break;
+          case 3:
+            blockchainSkills[blockchainSkills.length] = item;
+            break;
+        }
+      });
+
+      const newData = [
+        {
+          skillsGroup: "Frontend",
+          skills: frontendSkills
+        },
+        {
+          skillsGroup: "Backend",
+          skills: backendSkills
+        },
+        {
+          skillsGroup: "WorkFlow",
+          skills: workflowSkills
+        },
+        {
+          skillsGroup: "Blockchain",
+          skills: blockchainSkills
+        }
+      ];
+      this.skills = newData;
+      console.log(frontendSkills);
+    });
+    //const data = require("../../../data/skills.json");
+    //this.skills = data;
   },
   template: "#skills-list"
 });

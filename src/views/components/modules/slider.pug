@@ -25,7 +25,7 @@ script(type="text/x-template")#slider-info
         "@after-enter"="callback('after-enter')"
         "@enter"="enterHandler"
       )
-        .slider__info-skills(:key="work.skills") {{work.skills}}
+        .slider__info-skills(:key="work.techs") {{work.techs}}
       .slider__info-button
         a(:href="work.link" target="_blank").button Посмотреть сайт
 

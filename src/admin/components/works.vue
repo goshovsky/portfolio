@@ -85,12 +85,21 @@ export default {
 .file-upload {
   position: relative; /* Даем возможность делать позиционирование, внутри данного элемента */
   overflow: hidden; /* Все что выходит за пределы - скрываем */
-  height: 36px; /* Задаем высоту кнопки выбора файла */
-  width: 190px;
+  height: 32px; /* Задаем высоту кнопки выбора файла */
+  width: 230px;
   border-radius: 3px;
-  padding: 8px 4px;
+  padding: 0;
   color: #6da047;
+  margin-top: 15px;
   text-align: center;
+  &:before {
+    content: "";
+    background: url("https://goshovsky.github.io/assets/images/load_pic.png");
+    width: 35px;
+    height: 37px;
+    background-size: contain;
+    display: block;
+  }
 }
 .file-upload:hover {
   color: #7aad55;

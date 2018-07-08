@@ -6,9 +6,11 @@
   opacity: 0;
   display: flex;
   transition: all 0.5s ease;
+  visibility: hidden;
   &.active {
+    visibility: visible;
     opacity: 1;
-    transition: all 0.5s ease;
+    transition: opacity 0.5s cubic-bezier(.17,.67,1,.29);
     .mobile-menu__background-left {
       width: 50%;
     }
@@ -48,8 +50,8 @@
   flex-wrap:nowrap;
   flex-direction: column;
   opacity: 0;
-  transition-delay: 0.5s;
   transition: opacity 0.5s cubic-bezier(0, 0, 1, 1);
+  transition-delay: 0.7s;
 }
 .mobile-menu__item {
   display: block;
