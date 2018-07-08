@@ -1,14 +1,19 @@
-div(":class"="{'active': isLoading, 'disabled': !isLoading }").mobile-menu
-    .mobile-menu__background.mobile-menu__background-left
-    .mobile-menu__background.mobile-menu__background-right
-    -
-        var links = [
+div.hero__menu
+    div(":class"="{'active': isLoading, 'disabled': !isLoading }").mobile-menu
+        .mobile-menu__background.mobile-menu__background-left
+        .mobile-menu__background.mobile-menu__background-right
+        -
+            var links = [
             ['Мои работы','/works.html'],
             ['Обо мне','/about.html'],
             ['Блог','/blog.html'],
             ['Авторизация','/']
-        ]
-    ul.mobile-menu_links
-        each item in links
-            li.mobile-menu__item
-                a(href=`${item[1]}`).mobile-menu__link #{item[0]}
+            ]
+        ul.mobile-menu_links
+            each item in links
+                li.mobile-menu__item
+                    a(href=`${item[1]}`).mobile-menu__link #{item[0]}
+    div(":class"="{'active': isLoading, 'disabled': !isLoading }",  @click="activeChange").hamburger.hamburger--elastic
+        .hamburger-box
+            .hamburger-inner
+

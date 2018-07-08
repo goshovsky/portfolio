@@ -1,13 +1,14 @@
 import Vue from "vue";
 
 new Vue({
-  el: "#internal",
+  el: "#mob-menu",
   data: {
-    isLoading: false
+    isActive: false
   },
   methods: {
     activeChange() {
-      this.isLoading = !this.isLoading;
+      this.isActive = !this.isActive;
     }
-  }
+  },
+  template: "#mobile-menu"
 });

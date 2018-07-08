@@ -3,10 +3,12 @@
   z-index: 20;
   height: 100%;
   width: 100%;
-  //display: flex;
-  display: none;
+  opacity: 0;
+  display: flex;
+  transition: all 0.5s ease;
   &.active {
-    display: flex;
+    opacity: 1;
+    transition: all 0.5s ease;
     .mobile-menu__background-left {
       width: 50%;
     }

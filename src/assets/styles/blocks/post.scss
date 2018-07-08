@@ -4,6 +4,9 @@
   &:last-child {
     margin-bottom: 75px;
   }
+  &:first-child{
+    margin-top: 0;
+  }
   @include notebook {
     padding: 0 20px;
   }

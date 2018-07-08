@@ -2,10 +2,6 @@ section.hero
     .hero__wrap
         .hero__links
             +socials('socials_about')
-        div.hero__menu
-            div(":class"="{'active': isLoading, 'disabled': !isLoading }",  @click="activeChange").hamburger.hamburger--elastic
-                .hamburger-box
-                    .hamburger-inner
         .hero__title
             .user.hero__user
                 .user__pic
