@@ -77,7 +77,7 @@
   margin-bottom: 40px;
   width: 260px;
   position: relative;
-  &:hover {
+  &:hover, &--active {
     color:#4e8839;
     text-decoration: none;
     &:after {
@@ -95,6 +95,17 @@
   }
 }
 
+.menu-left {
+  position: relative;
+  top: 0;
+}
+
+.menu-left.fixed {
+  left: 0;
+  width: 30%;
+  padding: 0 40px;
+}
+
 .menu-left__link {
   font-size:16px;
   color: #455a64;
@@ -108,4 +119,9 @@
 
 .internal-footer.blog-footer {
   position: relative;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
 }
