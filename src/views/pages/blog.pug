@@ -5,7 +5,6 @@ block variables
   - var footerModificator = true;
 
 block scripts
-  script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js')
   script(src='blog.bundle.js')
 
 block content
@@ -19,12 +18,13 @@ block content
                 .user__title Блог
                 .user__info Статьи, которые я написал
 
-    section.blog
+    section(id="blog").blog
         .blog__triangles
             +section-triangles('#fff', '#fff')
         div(id="postsList").blog-content
             .blog__left
-                aside.sidebar
+                div(@click="showMenu"  ":class"="{'active': isShowMenu, '': !isShowMenu }").menu-circle
+                aside(":class"="{'active': isShowMenu, '': !isShowMenu }").sidebar
                     nav.menu-left
                         ul(v-for="item in posts").menu-left__list
                             li.menu-left__item

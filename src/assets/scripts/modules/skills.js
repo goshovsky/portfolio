@@ -90,10 +90,7 @@ new Vue({
         }
       ];
       this.skills = newData;
-      console.log(frontendSkills);
     });
-    //const data = require("../../../data/skills.json");
-    //this.skills = data;
   },
   template: "#skills-list"
 });

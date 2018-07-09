@@ -4,6 +4,7 @@ block variables
   - var title = 'Обо мне';
 
 block scripts
+  script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDn-Phrt2ecty1kWso5MTjS3wzIqnZdwKA")
   script(src='about.bundle.js')
 
 block content
@@ -37,7 +38,7 @@ block content
 
     .clearfix
     section.map
-        .google-map
+        div(id="google-map").google-map
         .map__data
             .contacts
                 h2.contacts__title

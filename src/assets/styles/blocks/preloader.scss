@@ -1,0 +1,17 @@
+.preloader {
+  background: url("/assets/images/forest_prel_bg.jpg") center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: 110;
+  position: absolute;
+  svg {
+    fill: #fff;
+    display: block;
+    width: 100px;
+    height: 100px;
+  }
+  &.hide {
+    display: none;
+  }
+}
