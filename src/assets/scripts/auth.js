@@ -1,5 +1,7 @@
 import Vue from "vue";
 import axios from "axios";
+import { preLoader } from "./modules/preloader";
+preLoader();
 
 const welcome = new Vue({
   el: "#welcome",

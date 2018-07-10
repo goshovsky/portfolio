@@ -78,6 +78,7 @@
     "vue": "2.5.13",
     "vue-router": "^3.0.1",
     "vue-sticky": "^3.3.4",
+    "vue2-google-maps": "^0.9.7",
     "vuex": "^3.0.1"
   }
 }

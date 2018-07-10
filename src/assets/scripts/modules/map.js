@@ -1,5 +1,4 @@
-export const mapGoogle = function() {
-  console.log("sdfsdfd");
+export const googleMap = function() {
   let map_zoom = 14;
   let center_latitude = 59.945,
     center_longitude = 30.3597;
@@ -87,7 +86,7 @@ export const mapGoogle = function() {
     {
       featureType: "water",
       elementType: "geometry.fill",
-      stylers: [{ visibility: "on" }, { color: "#5f5d5d" }]
+      stylers: [{ visibility: "on" }, { color: "#4e8839" }]
     },
     {
       featureType: "water",
@@ -118,10 +117,4 @@ export const mapGoogle = function() {
     document.getElementById("google-map"),
     map_options
   );
-  let marker = new google.maps.Marker({
-    position: new google.maps.LatLng(59.9487, 30.3598),
-    map: map,
-    visible: true,
-    icon: marker_url
-  });
 };

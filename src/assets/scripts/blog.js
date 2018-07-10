@@ -1,8 +1,10 @@
 import "./modules/mobile_menu";
-import "./modules/preloader";
+import { preLoader } from "./modules/preloader";
 import Vue from "vue";
 import axios from "axios";
 axios.defaults.baseURL = "http://webdev-api.loftschool.com/";
+
+preLoader();
 new Vue({
   el: "#postsList",
   data: {
