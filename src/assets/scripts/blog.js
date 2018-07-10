@@ -9,7 +9,9 @@ new Vue({
   el: "#postsList",
   data: {
     posts: Array,
-    isShowMenu: false
+    isShowMenu: false,
+    isFixed: false,
+    scrollPosition: 0
   },
   created() {
     axios.get("/posts/11").then(response => {
@@ -23,10 +25,19 @@ new Vue({
       });
       this.posts = respData;
     });
+    window.addEventListener("scroll", this.handleScroll);
   },
   methods: {
     showMenu() {
       this.isShowMenu = !this.isShowMenu;
+    },
+    handleScroll: function(e) {
+      let scroll = window.pageYOffset;
+      if (scroll < 380) {
+        this.isFixed = false;
+      } else {
+        this.isFixed = true;
+      }
     }
   }
 });

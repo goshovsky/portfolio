@@ -5,7 +5,6 @@ block variables
   - var footerModificator = true;
 
 block scripts
-  script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js")
   script(src='blog.bundle.js')
 
 block content
@@ -26,7 +25,7 @@ block content
             .blog__left
                 div(@click="showMenu"  ":class"="{'active': isShowMenu, '': !isShowMenu }").menu-circle
                 aside(":class"="{'active': isShowMenu, '': !isShowMenu }").sidebar
-                    nav.menu-left
+                    nav(":scroll"="handleScroll", :class="{'fixed': isFixed, '': !isFixed }").menu-left
                         ul(v-for="item in posts").menu-left__list
                             li.menu-left__item
                                 a.menu-left__link {{ item.title }}
