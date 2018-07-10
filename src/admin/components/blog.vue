@@ -80,4 +80,12 @@ export default {
     color: #566358;
   }
 }
+@media (max-width: 768px) {
+  .works-wrap {
+    textarea,
+    input {
+      width: 100%;
+    }
+  }
+}
 </style>

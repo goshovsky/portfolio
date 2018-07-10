@@ -62,7 +62,7 @@ html {
 }
 
 .header {
-  height: 80px;
+  height: 90px;
 }
 
 ul {
@@ -76,10 +76,6 @@ ul {
 
 * {
   box-sizing: border-box;
-}
-
-.tabs {
-  height: 60px;
 }
 
 .content {
@@ -101,8 +97,7 @@ h1 {
   border: none;
   border-radius: 7px;
   cursor: pointer;
-  position: absolute;
-  bottom: 30px;
+  margin-top: 40px;
   &:hover {
     background-color: #4e8839;
   }

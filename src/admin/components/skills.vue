@@ -53,6 +53,6 @@ export default {
 .skillsWrap {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
 }
 </style>

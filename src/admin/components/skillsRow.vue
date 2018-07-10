@@ -12,7 +12,6 @@
         :editmode="true"
         :typeId="type.id"
       )
-    HR
 
 </template>
 
@@ -49,7 +48,49 @@ export default {
 </script>
 <style lang="scss">
 .skills {
-  flex: 1 1;
-  width: 50%;
+  width: 40%;
+}
+.btn-skills {
+  padding: 5px 7px;
+  color: #fff;
+  font-size: 14px;
+  background-color: #6da047;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  &:hover {
+    background-color: #4e8839;
+  }
+  &.delete-btn {
+    background-color: #8d8d8d;
+  }
+}
+.skills-title {
+  font-size: 17px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.skills-list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+.skills-item td {
+  padding-bottom: 8px;
+  input {
+    border-radius: 5px;
+    padding: 5px 10px;
+    width: 80%;
+    border: none;
+  }
+}
+@media (max-width: 1250px) {
+  .skills {
+    width: 50%;
+  }
+}
+@media (max-width: 1250px) {
+  .skills {
+    width: 100%;
+  }
 }
 </style>

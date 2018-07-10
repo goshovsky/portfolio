@@ -56,7 +56,7 @@ router.beforeEach((to, from, next) => {
     .catch(error => {
       console.log("error in router");
       localStorage.removeItem("token");
-      window.location.href = "//google.com";
+      window.location.href = "/";
     });
 
   // next();
